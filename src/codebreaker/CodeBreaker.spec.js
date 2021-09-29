@@ -15,13 +15,13 @@ describe("CodeBreaker", () => {
   });
 
   it("Al iniciar codebreaker", () => {
-    expect(resultado.innerHTML).toEqual("");
+    expect(mensajeResultante()).toEqual("");
   });
 
   it("Ingreso un numero que no es correcto", () => {
     ingreso(4);
     intentoAdivinar();
-    expect(resultado.innerHTML).toEqual("No es el numero correcto");
+    expect(mensajeResultante()).toEqual("No es el numero correcto");
   });
 
   function ingreso(num) {
@@ -30,5 +30,9 @@ describe("CodeBreaker", () => {
 
   function intentoAdivinar() {
     boton.click();
+  }
+
+  function mensajeResultante() {
+    return resultado.innerHTML;
   }
 });
