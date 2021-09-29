@@ -7,21 +7,21 @@ describe("CodeBreaker", () => {
 
   beforeAll(() => {
     document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
+    require("../codebreaker/presenter");
+
     numeroInput = document.querySelector("#numero");
     boton = document.querySelector("#boton");
     resultado = document.querySelector("#div-resultado");
-
-    require("../codebreaker/presenter");
-  });
-
-  it("Al iniciar codebreaker", () => {
-    expect(mensajeResultante()).toEqual("");
   });
 
   it("Ingreso un numero que no es correcto", () => {
     ingreso(4);
     intentoAdivinar();
     expect(mensajeResultante()).toEqual("No es el numero correcto");
+  });
+
+  it("Al iniciar codebreaker", () => {
+    expect(mensajeResultante()).toEqual("");
   });
 
   function ingreso(num) {
@@ -35,4 +35,8 @@ describe("CodeBreaker", () => {
   function mensajeResultante() {
     return resultado.innerHTML;
   }
+
+  afterEach(() => {
+    resultado.innerHTML = "";
+  });
 });
