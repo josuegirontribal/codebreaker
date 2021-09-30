@@ -1,3 +1,6 @@
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
 import fs from "fs";
 
 describe("CodeBreaker", () => {
@@ -6,8 +9,17 @@ describe("CodeBreaker", () => {
   let resultado;
 
   beforeAll(() => {
-    document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
+    const html = fs.readFileSync("codebreaker.html", "utf8").toString();
+    const dom = new JSDOM(html, {
+      resources: "usable",
+      runScripts: "dangerously",
+    });
+    console.log(dom.serialize());
+
+    document.body.innerHTML = dom.serialize();
     require("../codebreaker/presenter");
+
+    // document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
 
     numeroInput = document.querySelector("#numero");
     boton = document.querySelector("#boton");
