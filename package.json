@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "test": "jest --watch",
-    "test-once": "jest",
+    "test": "jest --env='jsdom' --coverage --watch",
+    "test-once": "jest --env='jsdom' --coverage",
     "start": "parcel codebreaker.html",
     "build": "parcel build codebreaker.html"
   },
