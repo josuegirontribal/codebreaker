@@ -8,7 +8,7 @@ on:
 
 jobs:
   ci_to_main:
-    runs-on: ubuntu-latest
+    runsg-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up node.js
