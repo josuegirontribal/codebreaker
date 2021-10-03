@@ -21,3 +21,5 @@ npm run test-once
 https://www.docker.com/blog/getting-started-with-docker-using-node-jspart-i/
 
 docker-compose run --service-ports csd-service bash
+
+--solo para probar ci
