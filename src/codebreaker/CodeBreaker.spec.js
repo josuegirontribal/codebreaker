@@ -24,6 +24,12 @@ describe("CodeBreaker", () => {
     expect(mensajeResultante()).toEqual("");
   });
 
+  it("Ingreso un numero que es correcto", () => {
+    ingreso(8);
+    intentoAdivinar();
+    expect(mensajeResultante()).toEqual("Ganaste!");
+  });
+
   function ingreso(num) {
     numeroInput.value = num;
   }
