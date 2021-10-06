@@ -2,8 +2,8 @@
   "scripts": {
     "test": "jest --env='jsdom' --coverage --watch",
     "test-once": "jest --env='jsdom' --coverage",
-    "start": "parcel codebreaker.html",
-    "build": "parcel build codebreaker.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "@babel/core": "^7.15.4",

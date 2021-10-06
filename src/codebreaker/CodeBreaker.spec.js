@@ -6,7 +6,7 @@ describe("CodeBreaker", () => {
   let resultado;
 
   beforeAll(() => {
-    document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
+    document.body.innerHTML = fs.readFileSync("index.html", "utf8");
     require("../codebreaker/presenter");
 
     numeroInput = document.querySelector("#numero");
