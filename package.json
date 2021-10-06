@@ -3,7 +3,7 @@
     "test": "jest --env='jsdom' --coverage --watch",
     "test-once": "jest --env='jsdom' --coverage",
     "start": "parcel index.html",
-    "build": "parcel build --no-minify --no-source-maps --no-cache index.html"
+    "build": "parcel build --no-source-maps --no-cache index.html"
   },
   "dependencies": {
     "@babel/core": "^7.15.4",
