@@ -1,0 +1,1 @@
+document.querySelector("#boton").addEventListener("click",(function(){var e,r,n=document.querySelector("#div-resultado"),o=document.querySelector("#rand-number"),t=document.querySelector("#numero"),u=parseInt(o.value);""===o.value&&(e=0,r=9,u=Math.floor(Math.random()*(r-e+1)+e)),parseInt(t.value)!==u?n.innerHTML="No es el numero correcto":n.innerHTML="Ganaste!"}));
